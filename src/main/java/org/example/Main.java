@@ -9,19 +9,16 @@ public class Main {
     public static boolean shouldWakeUp(boolean isBarking, int clock) {
         if(clock < 0 || clock > 23)
             return false;
-        if(isBarking && (clock < 8 || clock > 20))
-            return true;
-        return false;
+        return (isBarking && (clock < 8 || clock > 20));
     }
 
     public static boolean hasTeen(int firstAge, int secondAge, int thirdAge) {
-        if((firstAge>=13 && firstAge<=19)||(secondAge>=13 && secondAge<=19)||(thirdAge>=13 && thirdAge<=19)) return true;
-        return false;
+        return ((firstAge>=13 && firstAge<=19)||(secondAge>=13 && secondAge<=19)||(thirdAge>=13 && thirdAge<=19));
     }
 
     public static boolean isCatPlaying(boolean isSummer, int temp) {
-        if(isSummer && (temp>=25 && temp<=45) || !isSummer && (temp>=25 && temp<=35)) return true;
-        return false;
+        int der = isSummer ? 45 : 35;
+        return (temp>=25 && temp<=der) ;
     }
 
     public static double area(double width, double height) {
